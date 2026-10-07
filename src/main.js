@@ -1101,11 +1101,16 @@ function loop(t) {
 requestAnimationFrame(loop);
 // DEV-HOOK-START
 // Atalho para depurar no console do navegador (só no `npm run dev`): window.__game
+// Também usado pelos testes automatizados (tests/simulate.mjs).
 if (import.meta.env && import.meta.env.DEV) {
   window.__game = {
     players, blocks, solids, stage1, elev, simon, fin, pads, sweepers, plates, scene, camera,
-    get state() { return state; },
-    get cur() { return cur; },
+    keys,
+    update, frame,
+    get state()    { return state; },
+    get cur()      { return cur; },
+    get SECRET()   { return SECRET; },
+    get revealed() { return revealed; },
     skip: debugSkip
   };
 }
