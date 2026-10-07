@@ -3,3 +3,5 @@ dist/
 dist-single/
 .DS_Store
 *.log
+.vs/
+.claude/
