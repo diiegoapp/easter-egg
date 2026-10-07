@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": false,
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "search.exclude": { "dist": true, "dist-single": true, "node_modules": true }
+}

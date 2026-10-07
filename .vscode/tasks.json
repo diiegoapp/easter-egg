@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dev (servidor)",
+      "type": "npm",
+      "script": "dev",
+      "isBackground": true,
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true }
+    },
+    { "label": "build (dist/)", "type": "npm", "script": "build", "problemMatcher": [] },
+    { "label": "build arquivo único (offline)", "type": "npm", "script": "build:single", "problemMatcher": [] }
+  ]
+}

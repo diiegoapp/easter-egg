@@ -1,0 +1,21 @@
+{
+  "name": "easter-egg",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Jogo cooperativo 3D (2 jogadores) para o chá revelação",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:single": "vite build --mode single",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource/fredoka": "^5.0.0",
+    "three": "0.128.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0",
+    "vite-plugin-singlefile": "^2.0.0"
+  }
+}

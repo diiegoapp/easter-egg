@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chá Revelação 3D — MENIN?</title>
+</head>
+<body>
+<div id="stage">
+  <canvas id="gl"></canvas>
+
+  <div id="hud" aria-live="polite">
+    <div id="slots"></div>
+    <div id="hint"></div>
+    <div id="timer">00:00</div>
+    <div id="tag">ENSAIO</div>
+    <div id="keys">F: tela cheia</div>
+  </div>
+  <div id="vig"></div>
+  <div id="flash"></div>
+  <div id="banner"><div class="b1"></div><div class="b2"></div><div class="b3"></div></div>
+
+  <div id="lobby">
+    <div class="lobcard">
+      <h2>Chá Revelação 3D</h2>
+      <p class="sub">Cada um pega um controle e aperta qualquer botão</p>
+      <div class="pl">
+        <div class="pbox" id="p0box"><b>Papai</b><span id="st0">Aperte um botão…</span></div>
+        <div class="pbox" id="p1box"><b>Mamãe</b><span id="st1">Aperte um botão…</span></div>
+      </div>
+      <p class="how">Controle: analógico move, <kbd>A</kbd> pula, <kbd>B</kbd> segura e comemora.<br>
+        Teclado 1: <kbd>WASD</kbd> + <kbd>Espaço</kbd> pula + <kbd>E</kbd> segura. Teclado 2: <kbd>Setas</kbd> + <kbd>Enter</kbd> pula + <kbd>Shift direito</kbd> segura.<br>
+        <kbd>T</kbd> troca os papéis · <kbd>F</kbd> tela cheia</p>
+    </div>
+  </div>
+  <div id="count"></div>
+
+  <div id="secret" role="dialog" aria-labelledby="stitle">
+    <div class="card">
+      <h1 id="stitle">Modo segredo</h1>
+      <p>Passe o notebook para quem vai guardar o segredo. <strong>Papai e mamãe, não olhem!</strong></p>
+      <label for="s1">Qual é o sexo do bebê? Digite <em>menino</em> ou <em>menina</em></label>
+      <input id="s1" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="off">
+      <label for="s2">Digite de novo para confirmar</label>
+      <input id="s2" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="off">
+      <div id="err" role="alert"></div>
+      <button id="go" class="go" type="button">Guardar segredo e começar</button>
+      <button id="rehearsal" class="ghost" type="button">Fazer um ensaio (resultado sorteado, não vale)</button>
+      <p class="warn">O que for digitado fica só na memória desta aba e não aparece em nenhuma tela. Não recarregue a página depois de guardar.</p>
+    </div>
+  </div>
+
+  <div id="toast" role="status"></div>
+  <div id="fatal" hidden>Não foi possível iniciar o 3D (WebGL). Use um Chrome ou Edge atualizado e confira se a aceleração por hardware está ativa.</div>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
